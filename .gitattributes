@@ -1,0 +1,10 @@
+docs/tutorials/sogmm-tut.ipynb filter=lfs diff=lfs merge=lfs -text
+docs/tutorials/sogmm-tut/results/sogmm-tut-1.png filter=lfs diff=lfs merge=lfs -text
+docs/tutorials/sogmm-tut/results/sogmm-tut-2.png filter=lfs diff=lfs merge=lfs -text
+docs/tutorials/sogmm-tut/results/sogmm-tut-3.png filter=lfs diff=lfs merge=lfs -text
+docs/tutorials/sogmm-tut/results/sogmm-tut-4.png filter=lfs diff=lfs merge=lfs -text
+tutorials/sogmm-tut/results/sogmm-tut-4.png filter=lfs diff=lfs merge=lfs -text
+tutorials/sogmm-tut/results/sogmm-tut-1.png filter=lfs diff=lfs merge=lfs -text
+tutorials/sogmm-tut/results/sogmm-tut-2.png filter=lfs diff=lfs merge=lfs -text
+tutorials/sogmm-tut/results/sogmm-tut-3.png filter=lfs diff=lfs merge=lfs -text
+tutorials/sogmm-tut.ipynb filter=lfs diff=lfs merge=lfs -text
