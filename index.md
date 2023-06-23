@@ -41,14 +41,6 @@ The `dry` workspace contains the following `git` submodules:
 > **Note**
 > `open3d_colcon` will not be compiled for macOS.
 
-4. `pcl_colcon`: Colcon package to pull PCL.
-> **Note**
-> `pcl_colcon` will be compiled without CUDA support on all platforms.
-
-5. `ndt_map`: A copy of NDTMap with our modifications for comparison. The original codebase is [here](https://github.com/OctoMap/octomap/tree/devel).
-
-6. `octomap`: A copy of the original OctoMap codebase with our modifications for comparison. The original codebase is [here](https://github.com/OrebroUniversity/perception_oru/tree/port-kinetic).
-
 The `wet` workspace contains the following `git` submodules:
 
 1. `self_organizing_gmm`: C++ codebase accelerated with OpenMP for Intel/AMD/ARM CPUs.
@@ -57,11 +49,7 @@ The `wet` workspace contains the following `git` submodules:
 > **Note**
 > `sogmm_open3d` will not be compiled for macOS.
 
-3. `ndt_map_py`: Python bindings over `ndt_map`.
-
-4. `octomap_py`: Python bindings over `octomap`.
-
-5. `sogmm_py`: Scripts for visualization, comparison, testing, and profiling.
+3. `sogmm_py`: Scripts for visualization, comparison, testing, and profiling.
 
 ## Supported Platforms
 The codebase has been tested on the following platforms:
@@ -85,15 +73,12 @@ The codebase has been tested on the following platforms:
 | MacBook/Intel | MacOS Ventura 13.3.1 | 2.3 GHz 8-Core Intel Core i9 | N/A | 16 GB | N/A |
 
 ## Build and Install
-<details>
-<summary>Linux</summary>
-
 We require using a Python 3.8 virtual environment using `pip`. Assume that the
 virtual environment is created within this repository using the folder name
 `.venv`. First, we set up the `colcon` build environment.
 
 ```bash
-git clone git@github.com:rislab/gira3d-reconstruction.git
+git clone git@github.com:gira3d/gira3d-reconstruction.git
 git checkout master # or your favorite branch
 git submodule update --recursive --init
 cd gira3d-reconstruction
@@ -106,7 +91,7 @@ pip install colcon-common-extensions wheel
 For Python scripts, run-time dependencies can be installed using `pip`. Make sure
 the virtual environment created above is active.
 ```bash
-pip install numpy open3d==0.16.0 scikit-learn opencv-python scikit-image future matplotlib termcolor
+pip install numpy scikit-learn opencv-python scikit-image future matplotlib termcolor
 ```
 
 Finally, run the `build` script:
@@ -117,41 +102,6 @@ Finally, run the `build` script:
 Some helper scripts are provided as follows:
 1. `clean`: Clean the builds for both `dry` and `wet` workspaces.
 2. `configure`: Pull the submodules.
-</details>
-
-<details>
-<summary>macOS</summary>
-We require using a Python 3.8 virtual environment using `pip`. Assume that the
-virtual environment is created within this repository using the folder name
-`.venv`. First, we set up the `colcon` build environment.
-
-```bash
-git clone git@github.com:rislab/gira3d-reconstruction.git
-git checkout master # or your favorite branch
-git submodule update --recursive --init
-cd gira3d-reconstruction
-python3.8 -m venv .venv
-source .venv/bin/activate
-pip install --upgrade pip
-pip install colcon-common-extensions wheel
-```
-
-For Python scripts, run-time dependencies can be installed using `pip`. Make sure
-the virtual environment created above is active.
-```bash
-pip install numpy open3d==0.16.0 scikit-learn opencv-python scikit-image future matplotlib termcolor
-```
-
-Finally, run the `build` script:
-```bash
-./build
-```
-
-Some helper scripts are provided as follows:
-1. `clean`: Clean the builds for both `dry` and `wet` workspaces.
-2. `configure`: Pull the submodules.
-
-</details>
 
 > **Warning**
 > If you run into issues with OpenMP on MacOS, you might need to use the `llvm` clang
@@ -199,7 +149,7 @@ Kshitij Goel, Wennie Tabib
 ```
 BSD 3-Clause License
 
-Copyright (c) 2023, Resilient Intelligent Systems Laboratory
+Copyright (c) 2023, Kshitij Goel, Wennie Tabib
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
